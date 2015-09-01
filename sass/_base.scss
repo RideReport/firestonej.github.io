@@ -1,0 +1,57 @@
+body {
+  font-size: 20px;
+}
+
+h1 {
+  
+}
+h2 {
+  
+}
+h3 {
+  
+}
+h4 {
+  
+}
+h5 {
+  
+}
+h6 {
+  
+}
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1;
+  
+  a, a:visited, a:active, a:hover, a:focus {
+    
+  }
+}
+
+a {
+  
+  &:hover, &:active {
+    
+  }
+  &:visited {
+    
+  }
+}
+
+p {
+  line-height: 1.3em;
+  margin: .2em 0;
+}
+
+::selection, ::-moz-selection {
+  
+}
+
+body, button, input, select, textarea {
+  
+}
+
+p, ul, ol {
+  margin-bottom: 1em;
+}

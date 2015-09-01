@@ -1,0 +1,158 @@
+@mixin grid_first {
+  &__first {
+    clear: left;
+    margin-left: 0;
+  }
+}
+
+@include breakpoint($bp-large) {
+    .l-large {
+      &--full {
+        @include with-layout($g-large) {
+          @include span(12);
+        }
+      }
+      &--half {
+        @include with-layout($g-large) {
+          @include span(6);
+        }
+      }
+      &--10_12 {
+        @include with-layout($g-large) {
+          @include span(10);
+        }
+      }
+      &--9_12 {
+        @include with-layout($g-large) {
+          @include span(9);
+        }
+      }
+      &--8_12 {
+        @include with-layout($g-large) {
+          @include span(8);
+        }
+      }
+      &--7_12 {
+        @include with-layout($g-large) {
+          @include span(7);
+        }
+      }
+      &--5_12 {
+        @include with-layout($g-large) {
+          @include span(5);
+        }
+      }
+      &--4_12 {
+        @include with-layout($g-large) {
+          @include span(4);
+        }
+      }
+      &--3_12 {
+        @include with-layout($g-large) {
+          @include span(3);
+        }
+      }
+      &--2_12 {
+        @include with-layout($g-large) {
+          @include span(2);
+        }
+      }
+      &--push_1 {
+        @include with-layout($g-large) {
+          @include push(1 of 12); 
+        }
+      }
+      &--push_2 {
+        @include with-layout($g-large) {
+          @include push(2 of 12);
+        }
+      }
+      &--push_4 {
+        @include with-layout($g-large) {
+          @include push(4 of 12);
+        }
+      }
+      
+      // Custom grid work for sub page items
+      &--5_9 {
+        @include with-layout((columns: 9)){
+          @include span(5);
+        }
+      }
+      &--4_9 {
+        @include with-layout((columns: 9)){
+          @include span(4 of 9);
+        }
+      }
+      
+      &--none {
+        display: none;
+      }
+      
+      &--3_6 {
+        @include with-layout($g-large) {
+          @include span(3 of 6);
+        }
+      }
+      @include grid_first;
+      &--rtl {
+        float: right;
+      }
+    }
+}
+@include breakpoint($bp-medium) {
+  @include with-layout($g-medium) {
+    .l-medium {
+      &--full {
+        @include span(8);
+      }
+      &--two_thirds {
+        @include span(5.3);
+      }
+      &--one_third {
+        @include span(2.666);
+      }
+      &--5_8 {
+        @include span(5);
+      }
+      &--3_8 {
+        @include span(3);
+      }
+      &--2_8 {
+        @include span(2);
+      }
+      &--half {
+        @include span(4);
+      }
+      
+      &--push_2 {
+        @include push(2 of 8);
+      }
+      
+      &--none {
+        display: none;
+      }
+      @include grid_first;
+      &--rtl {
+        float: right;
+      }
+    }
+  }
+}
+@include breakpoint($bp-small) {
+  @include with-layout($g-small) {
+    .l-small {
+      &--full {
+        @include span(5);
+      }
+      &--half {
+        @include span(2.5);
+      }
+      
+      &--none {
+        display: none;
+      }
+      @include grid_first;
+    }
+  }
+}
