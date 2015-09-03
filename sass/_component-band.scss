@@ -1,7 +1,7 @@
 .band {
   
-  &--main {  
-    @include content-center;
+  &--main {
+    
   }
   
   &--green-split {
@@ -14,8 +14,36 @@
         $c-lightgreen 100%
       );
     }
+    
+    color: $c-white;
+    
+    a {
+      color: $c-purple;
+      @include font-nimbus-con;
+      font-weight: 600;
+      text-transform: uppercase;
+      &:hover {
+        color: darken($c-purple, 6%);
+      }
+    }
+    
+    .button, form input[type='submit'] {
+      @include button-purple;
+      padding: 8px 15px;
+    }
+    
+    .band--main {
+      @include breakpoint($bp-medium-up){
+        @include content-center;
+      }
+    }
   }
   
-  
-  
+  &--blue {
+    color: $c-white;
+    
+    .button {
+      @include button-purple;
+    }
+  }
 }

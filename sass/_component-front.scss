@@ -47,7 +47,9 @@
   }
   
   &--right {
-    text-align: center;  
+    @include breakpoint($bp-medium-up){
+      text-align: center;
+    }
   }
   
   &--phone {
@@ -63,6 +65,11 @@
   &--button {
     @include button-big;
     @include button-yellow;
+    
+    @include breakpoint($bp-small){
+      display: inline-block;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -70,19 +77,46 @@
   background-color: $c-green;
   text-align: center;
   padding-top: 3em;
+  padding-bottom: 2em;
+  
+  &--main {
+    @include breakpoint($bp-small){
+      @include content-pad;
+    }
+  }
+  
+  @include breakpoint($bp-small){
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  
+  input[type="text"]{
+    margin-bottom: 10px;
+    width: 60%;
+    max-width: 216px;
+  }
 }
 
 .odo {
+  padding-bottom: 2em;
   text-align: center;
+  z-index: stacking_order('odo');
+  
+  &--main {
+    @include breakpoint($bp-small){
+      @include content-pad;
+    }
+  }
+    
+  @include breakpoint($bp-small){
+    background-color: $c-lightgreen;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
   @include breakpoint($bp-medium){
     padding-top: 3em;  
   }
   @include breakpoint($bp-large){
     padding-top: 5em;
-  }
-  z-index: stacking_order('odo');
-  
-  @include breakpoint($bp-small){
-    background-color: $c-lightgreen;
   }
 }
