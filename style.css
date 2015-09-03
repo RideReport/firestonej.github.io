@@ -629,11 +629,11 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
       font-size: 1.4em; } }
   @media  (min-width: 881px) {
     .button-big {
-      padding: 22px 44px;
+      padding: 18px 35px;
       border-radius: 7px;
       font-size: 1.9em; } }
   .no-mediaqueries .button-big {
-    padding: 22px 44px;
+    padding: 18px 35px;
     border-radius: 7px;
     font-size: 1.9em; }
 
@@ -785,11 +785,11 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
         font-size: 1.4em; } }
     @media  (min-width: 881px) {
       .hero--button {
-        padding: 22px 44px;
+        padding: 18px 35px;
         border-radius: 7px;
         font-size: 1.9em; } }
     .no-mediaqueries .hero--button {
-      padding: 22px 44px;
+      padding: 18px 35px;
       border-radius: 7px;
       font-size: 1.9em; }
     .hero--button:hover {
