@@ -152,6 +152,11 @@
       &--none {
         display: none;
       }
+      &--contain {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+      
       @include grid_first;
     }
   }

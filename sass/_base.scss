@@ -40,10 +40,15 @@ h4 {
 }
 h5 {
   @include font-nimbus-con;
-  font-size: 2em;
-  color: $c-darkgreen;
+  font-size: 2.4em;
+  color: $c-white;
+  text-transform: uppercase;
 }
 h6 {
+  @include font-nimbus-con;
+  font-size: 2em;
+  color: $c-darkgreen;
+  text-transform: uppercase;
   
 }
 

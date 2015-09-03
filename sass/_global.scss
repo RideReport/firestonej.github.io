@@ -35,8 +35,8 @@ $susy: (
   gutters: 30/65,
   gutter-position: before
 );
-$bp-small: 0px 560px;
-$bp-medium: 561px 880px;
+$bp-small: 0px 600px;
+$bp-medium: 601px 880px;
 $bp-smmd: 0px 880px;
 $bp-medium-up: 561px, 'no-query' '.no-mediaqueries';
 $bp-large: 881px, 'no-query' '.no-mediaqueries';
@@ -83,7 +83,7 @@ $g-large: (
   }
 }
 
-@mixin content_full {
+@mixin content-full {
   margin-right: 0;
   margin-left: 0;
   padding: 0;
@@ -91,13 +91,14 @@ $g-large: (
   @include group;
 }
 
-@mixin content_center {
+@mixin content-center {
   margin: 0 auto;
-  max-width: 57.5em;
+  max-width: 60em;
   padding-right: 1em;
   padding-left: 1em;
   @include group;
 }
+
 
 // General fonts
 
@@ -117,6 +118,7 @@ $g-large: (
 // Buttons
 
 @mixin button {
+  display: inline-block;
   @include font-nimbus-con;
   font-weight: 600;
   text-transform: uppercase;
@@ -131,9 +133,22 @@ $g-large: (
 
 @mixin button-big {
   @include button;
-  padding: 22px 44px;
-  border-radius: 7px;
-  font-size: 1.9em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.7em;
+  
+  @include breakpoint($bp-small){
+    width: 100%;
+    text-align: center;
+    max-width: 370px;
+    font-size: 1.4em;
+  }
+  @include breakpoint($bp-large){
+    padding: 22px 44px;
+    border-radius: 7px;  
+    font-size: 1.9em;
+  }
+  
 }
 
 @mixin button-yellow {
