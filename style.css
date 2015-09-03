@@ -543,6 +543,9 @@ body {
   font-size: 20px;
   font-family: "nimbus-sans", sans-serif;
   background-color: #FFFFFF; }
+  @media  (min-width: 0px) and (max-width: 600px) {
+    body {
+      font-size: 18px; } }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1; }
@@ -563,23 +566,29 @@ h2 {
 h3 {
   font-family: "nimbus-sans-condensed", sans-serif;
   font-size: 3em;
+  font-weight: 600;
   color: #4d8e42;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem; }
 
 h4 {
-  font-family: "nimbus-sans-condensed", sans-serif;
-  font-size: 1.8em;
-  color: #84bb35; }
+  font-family: "nimbus-sans", sans-serif;
+  font-size: 1.3em;
+  color: #84bb35;
+  font-weight: 600; }
 
 h5 {
   font-family: "nimbus-sans-condensed", sans-serif;
   font-size: 2.4em;
+  font-weight: 600;
   color: #FFFFFF;
   text-transform: uppercase; }
 
 h6 {
   font-family: "nimbus-sans-condensed", sans-serif;
   font-size: 2em;
+  font-weight: 600;
   color: #4d8e42;
   text-transform: uppercase; }
 
@@ -635,6 +644,20 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   text-transform: uppercase;
   font-size: 1em; }
 
+.band--main {
+  max-width: 60em;
+  margin: 0 auto;
+  padding-right: 1em;
+  padding-left: 1em;
+  text-align: center; }
+  .band--main:after {
+    content: "";
+    display: table;
+    clear: both; }
+.band--white {
+  background-color: #FFFFFF;
+  padding-top: 2em;
+  padding-bottom: 2em; }
 .band--green-split {
   color: #FFFFFF; }
   @media  (min-width: 601px) {
@@ -645,6 +668,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   .band--green-split a {
     color: #c73d7b;
     font-family: "nimbus-sans-condensed", sans-serif;
+    font-size: 1.2em;
     font-weight: 600;
     text-transform: uppercase; }
     .band--green-split a:hover {
@@ -658,25 +682,12 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
       background-color: #b2336c; }
     .band--green-split .button:focus, .band--green-split .button:visited, .band--green-split form input[type='submit']:focus, .band--green-split form input[type='submit']:visited {
       color: #FFFFFF; }
-  @media  (min-width: 601px) {
+  @media  (min-width: 0px) and (max-width: 600px) {
     .band--green-split .band--main {
-      max-width: 60em;
-      margin: 0 auto;
-      padding-right: 1em;
-      padding-left: 1em; }
-      .band--green-split .band--main:after {
-        content: "";
-        display: table;
-        clear: both; } }
-  .no-mediaqueries .band--green-split .band--main {
-    max-width: 60em;
-    margin: 0 auto;
-    padding-right: 1em;
-    padding-left: 1em; }
-    .no-mediaqueries .band--green-split .band--main:after {
-      content: "";
-      display: table;
-      clear: both; }
+      padding-left: 0;
+      padding-right: 0;
+      max-width: none;
+      width: 100%; } }
 .band--blue {
   color: #FFFFFF; }
   .band--blue .button {
@@ -796,15 +807,14 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   text-align: center;
   padding-top: 3em;
   padding-bottom: 2em; }
-  @media  (min-width: 0px) and (max-width: 600px) {
-    .signup--main {
-      margin: 0 auto;
-      padding-right: 1em;
-      padding-left: 1em; }
-      .signup--main:after {
-        content: "";
-        display: table;
-        clear: both; } }
+  .signup--main {
+    margin: 0 auto;
+    padding-right: 1em;
+    padding-left: 1em; }
+    .signup--main:after {
+      content: "";
+      display: table;
+      clear: both; }
   @media  (min-width: 0px) and (max-width: 600px) {
     .signup {
       padding-top: 1em;
@@ -818,15 +828,14 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   padding-bottom: 2em;
   text-align: center;
   z-index: 51; }
-  @media  (min-width: 0px) and (max-width: 600px) {
-    .odo--main {
-      margin: 0 auto;
-      padding-right: 1em;
-      padding-left: 1em; }
-      .odo--main:after {
-        content: "";
-        display: table;
-        clear: both; } }
+  .odo--main {
+    margin: 0 auto;
+    padding-right: 1em;
+    padding-left: 1em; }
+    .odo--main:after {
+      content: "";
+      display: table;
+      clear: both; }
   @media  (min-width: 0px) and (max-width: 600px) {
     .odo {
       background-color: #a9cf71;
@@ -840,6 +849,18 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
       padding-top: 5em; } }
   .no-mediaqueries .odo {
     padding-top: 5em; }
+
+.how--bit {
+  text-align: center; }
+  @media  (min-width: 881px) {
+    .how--bit {
+      padding-left: 1.5em;
+      padding-right: 1.5em; } }
+  .no-mediaqueries .how--bit {
+    padding-left: 1.5em;
+    padding-right: 1.5em; }
+.how .hero--button {
+  margin-top: 1.5rem; }
 
 @media  (min-width: 881px) {
   .l--full {
@@ -1010,6 +1031,9 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
     margin-left: 26.0273972603%; }
   .m--none {
     display: none; }
+  .m--contain {
+    max-width: 500px;
+    margin: 0 auto; }
   .m--first {
     clear: left;
     margin-left: 0; }

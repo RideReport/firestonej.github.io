@@ -1,7 +1,14 @@
 .band {
   
   &--main {
-    
+    @include content-center;
+    text-align: center;
+  }
+  
+  &--white {
+    background-color: $c-white;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
   
   &--green-split {
@@ -20,6 +27,7 @@
     a {
       color: $c-purple;
       @include font-nimbus-con;
+      font-size: 1.2em;
       font-weight: 600;
       text-transform: uppercase;
       &:hover {
@@ -33,8 +41,11 @@
     }
     
     .band--main {
-      @include breakpoint($bp-medium-up){
-        @include content-center;
+      @include breakpoint($bp-small){
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+        width: 100%;
       }
     }
   }

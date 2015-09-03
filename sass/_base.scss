@@ -2,6 +2,10 @@ body {
   font-size: 20px;
   @include font-nimbus;
   background-color: $c-white;
+  
+  @include breakpoint($bp-small){
+    font-size: 18px;
+  }
 }
 
 
@@ -30,23 +34,29 @@ h2 {
 h3 {
   @include font-nimbus-con;
   font-size: 3em;
+  font-weight: 600;
   color: $c-darkgreen;
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 h4 {
-  @include font-nimbus-con;
-  font-size: 1.8em;
+  @include font-nimbus;
+  font-size: 1.3em;
   color: $c-green;
+  font-weight: 600;
 }
 h5 {
   @include font-nimbus-con;
   font-size: 2.4em;
+  font-weight: 600;
   color: $c-white;
   text-transform: uppercase;
 }
 h6 {
   @include font-nimbus-con;
   font-size: 2em;
+  font-weight: 600;
   color: $c-darkgreen;
   text-transform: uppercase;
   

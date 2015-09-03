@@ -80,9 +80,7 @@
   padding-bottom: 2em;
   
   &--main {
-    @include breakpoint($bp-small){
-      @include content-pad;
-    }
+    @include content-pad;  
   }
   
   @include breakpoint($bp-small){
@@ -103,9 +101,7 @@
   z-index: stacking_order('odo');
   
   &--main {
-    @include breakpoint($bp-small){
-      @include content-pad;
-    }
+    @include content-pad;
   }
     
   @include breakpoint($bp-small){
@@ -118,5 +114,20 @@
   }
   @include breakpoint($bp-large){
     padding-top: 5em;
+  }
+}
+
+.how {
+  &--bit {
+    text-align: center;
+    
+    @include breakpoint($bp-large){
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+  }
+  
+  .hero--button {
+    margin-top: 1.5rem;
   }
 }
