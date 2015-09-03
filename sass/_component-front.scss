@@ -8,7 +8,7 @@
   background-size: cover;
   color: $c-white;
     
-  &__main {
+  &--main {
     @include content-center;
     padding-top: 1.5em;
     
@@ -26,11 +26,11 @@
     }
   }
   
-  &__break {
+  &--break {
     
   }
   
-  &__tagline {
+  &--tagline {
     font-size: 1.2em;
     margin-bottom: 3.5em;
     
@@ -42,16 +42,25 @@
     }
   }
   
-  &__left, &__right {
-    
-    
+  &--left {
+    padding-bottom: 1em;
   }
   
-  &__phone {
-    margin-bottom: -1.5em;
+  &--right {
+    text-align: center;  
   }
   
-  &__button {
+  &--phone {
+    @include breakpoint($bp-medium){
+      margin-bottom: -1.5em; 
+    }
+    @include breakpoint($bp-large){
+      margin-bottom: -3em;
+    }
+    z-index: stacking_order('phone');
+  }
+  
+  &--button {
     @include button-big;
     @include button-yellow;
   }
@@ -59,16 +68,21 @@
 
 .signup {
   background-color: $c-green;
-  
-  &__main {
-    max-width: 30em;
-  }
+  text-align: center;
+  padding-top: 3em;
 }
 
 .odo {
-  background-color: $c-lightgreen;
+  text-align: center;
+  @include breakpoint($bp-medium){
+    padding-top: 3em;  
+  }
+  @include breakpoint($bp-large){
+    padding-top: 5em;
+  }
+  z-index: stacking_order('odo');
   
-  &__main {
-    max-width: 30em;
+  @include breakpoint($bp-small){
+    background-color: $c-lightgreen;
   }
 }
