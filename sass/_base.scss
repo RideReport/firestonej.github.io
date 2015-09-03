@@ -1,25 +1,9 @@
 body {
   font-size: 20px;
+  @include font-nimbus;
+  background-color: $c-white;
 }
 
-h1 {
-  
-}
-h2 {
-  
-}
-h3 {
-  
-}
-h4 {
-  
-}
-h5 {
-  
-}
-h6 {
-  
-}
 
 h1,h2,h3,h4,h5,h6 {
   line-height: 1;
@@ -29,13 +13,50 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
+h1 {
+  @include font-proxima;
+  font-size: 1.6em;
+  color: $c-white;
+}
+h2 {
+  @include font-nimbus-con;
+  font-size: 4.5em;
+  color: $c-white;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  line-height: .9;
+}
+h3 {
+  @include font-nimbus-con;
+  font-size: 3em;
+  color: $c-darkgreen;
+  text-transform: uppercase;
+}
+h4 {
+  @include font-nimbus-con;
+  font-size: 1.8em;
+  color: $c-green;
+}
+h5 {
+  @include font-nimbus-con;
+  font-size: 2em;
+  color: $c-darkgreen;
+}
+h6 {
+  
+}
+
+
 a {
+  color: $c-green;
+  text-decoration: none;
   
   &:hover, &:active {
-    
+    color: lighten($c-green, 12%);
   }
   &:visited {
-    
+    color: $c-green;
   }
 }
 

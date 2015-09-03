@@ -1,12 +1,12 @@
 @mixin grid_first {
-  &__first {
+  &--first {
     clear: left;
     margin-left: 0;
   }
 }
 
 @include breakpoint($bp-large) {
-    .l-large {
+    .l {
       &--full {
         @include with-layout($g-large) {
           @include span(12);
@@ -102,7 +102,7 @@
 }
 @include breakpoint($bp-medium) {
   @include with-layout($g-medium) {
-    .l-medium {
+    .m {
       &--full {
         @include span(8);
       }
@@ -141,7 +141,7 @@
 }
 @include breakpoint($bp-small) {
   @include with-layout($g-small) {
-    .l-small {
+    .s {
       &--full {
         @include span(5);
       }

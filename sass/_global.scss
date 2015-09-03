@@ -14,9 +14,14 @@ $c-black: #000000;
 $c-white: #FFFFFF;
 
 // Brand colors
+$c-green: #84bb35;
+$c-lightgreen: #a9cf71;
+$c-darkgreen: #4d8e42;
+$c-yellow: #febf33;
+$c-purple: #c73d7b;
+$c-blue: #2656c3;
 
-
-// Aliases
+// Color aliases
 
 
 // 1.2 Variables - Size
@@ -89,24 +94,76 @@ $g-large: (
 @mixin content_center {
   margin: 0 auto;
   max-width: 57.5em;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  padding-right: 1em;
+  padding-left: 1em;
   @include group;
 }
 
 // General fonts
 
-@mixin font-example {
+@mixin font-nimbus {
+  font-family: "nimbus-sans", sans-serif;
+}
+
+@mixin font-nimbus-con {
+  font-family: "nimbus-sans-condensed", sans-serif;
+}
+
+// Proxima requires Typekit sub; replace here.
+@mixin font-proxima {
   
 }
 
-/*
- * Page element mixins
- */
+// Buttons
+
+@mixin button {
+  @include font-nimbus-con;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin button-small {
+  @include button;
+  padding: 18px 35px;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+
+@mixin button-big {
+  @include button;
+  padding: 22px 44px;
+  border-radius: 7px;
+  font-size: 1.9em;
+}
+
+@mixin button-yellow {
+  color: $c-white;
+  background-color: $c-yellow;
+  &:hover {
+    color: $c-white;
+    background-color: darken($c-yellow, 12%);
+  }
+}
+
+@mixin button-purple {
+  color: $c-white;
+  background-color: $c-purple;
+  &:hover {
+    color: $c-white;
+    background-color: darken($c-yellow, 12%);
+  }
+}
+
+
+
+// Page element mixins
 
 @mixin rtl {
   @include layout(rtl);
 }
+
+
+
 
 
 //
